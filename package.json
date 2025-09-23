@@ -1,0 +1,24 @@
+{
+  "name": "ai-engineer-demos",
+  "version": "1.0.0",
+  "description": "A simple, responsive portfolio website that showcases GitHub repositories and activity using real-time public stats from the GitHub API.",
+  "main": "script.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:verbose": "jest --verbose",
+    "test:legacy": "node tests/portfolio.test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^30.1.3",
+    "jest-environment-jsdom": "^30.1.2",
+    "jsdom": "^26.1.0"
+  }
+}
