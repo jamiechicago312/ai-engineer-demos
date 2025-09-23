@@ -51,9 +51,18 @@ https://your-username.github.io/ai-engineer-demos/?user=github-username
 ├── index.html          # Main HTML structure
 ├── styles.css          # CSS styling and responsive design
 ├── script.js           # JavaScript for GitHub API integration
+├── tests/              # Comprehensive test suite
+│   ├── portfolio.test.js       # Legacy Node.js tests
+│   ├── portfolio.spec.js       # Jest unit tests
+│   ├── api.integration.test.js # API integration tests
+│   ├── test-portfolio.html     # Browser test runner
+│   ├── setup.js               # Jest configuration
+│   └── README.md              # Testing documentation
 ├── .github/
 │   └── workflows/
 │       └── deploy.yml  # GitHub Actions workflow for deployment
+├── package.json        # Node.js dependencies and scripts
+├── jest.config.js      # Jest testing configuration
 └── README.md           # This file
 ```
 
@@ -65,6 +74,8 @@ https://your-username.github.io/ai-engineer-demos/?user=github-username
 - **GitHub API**: Real-time data fetching
 - **Font Awesome**: Icons for better visual appeal
 - **GitHub Actions**: Automated deployment to GitHub Pages
+- **Jest**: Modern JavaScript testing framework
+- **Node.js**: Development and testing environment
 
 ## API Rate Limits
 
@@ -81,13 +92,47 @@ This portfolio uses the GitHub API without authentication, which has a rate limi
 - Safari (latest)
 - Edge (latest)
 
+## Testing
+
+This project includes a comprehensive test suite to ensure reliability and maintainability.
+
+### Running Tests
+
+```bash
+# Install dependencies
+npm install
+
+# Run all tests
+npm test
+
+# Run tests with coverage
+npm run test:coverage
+
+# Run legacy tests (no dependencies)
+npm run test:legacy
+
+# Run tests in watch mode
+npm run test:watch
+```
+
+### Test Coverage
+
+- **59 total tests** covering all major functions
+- **Unit tests** for individual JavaScript functions
+- **Integration tests** for GitHub API interactions
+- **Error handling** and edge case validation
+- **Browser compatibility** testing
+
+See `tests/README.md` for detailed testing documentation.
+
 ## Contributing
 
 1. Fork the repository
 2. Create a feature branch
 3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
+4. **Run tests**: `npm test`
+5. Add tests for new features
+6. Submit a pull request
 
 ## License
 
